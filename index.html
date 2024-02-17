@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html data-theme="cupcake" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bus-Ticket-Project</title>
+    <!-- Css connected link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Daisy UI and Tailwind link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="mx-32 my-8">
+      <nav class="flex justify-between items-center">
+        <h1 class="text-[#030712] font-extrabold text-4xl">P-Ticket</h1>
+        <div class="">
+          <ul class="flex gap-10 mx-auto font-medium text-[16px]">
+            <li>Home</li>
+            <li>About</li>
+            <li>Destination</li>
+            <li>Search</li>
+          </ul>
+        </div>
+        <button
+          class="btn btn-outline btn-success rounded-xl flex gap-3 items-center text-xl font-bold text-[#1DD100] bg-[#1DD1001A]"
+        >
+          Bus <span><img src="images/bus-icon.png" alt="" /></span>
+        </button>
+      </nav>
+      <!-- Template Section  -->
+      <section class="mt-12">
+        <div
+          class="bg-no-repeat bg-contain min-h-screen text-center pt-20"
+          style="background-image: url(images/banner.png)"
+        >
+          <h1 class="text-6xl font-extrabold text-white">
+            End-to-End Travel with <br />
+            <span class="text-[#1DD100]">P Paribahan</span>
+          </h1>
+          <p class="font-normal text-[18px] pt-8 text-white">
+            I realize a lot of questions have been asked about buses here.
+            <br />While the thing with the preposition usage was resolved for me
+          </p>
+          <button
+            class="btn rounded-xl items-center text-xl font-bold bg-[#1DD100] text-black border-none mt-5"
+          >
+            Buy Tickets
+          </button>
+        </div>
+      </section>
+
+      <!-- Offer Section -->
+      <section class="mt-12 text-center">
+        <h1 class="text-4xl font-bold text-center mb-12">
+          Best offers for you
+        </h1>
+        <div class="flex items-center justify-between gap-6">
+          <!-- card 01 -->
+          <div class="w-[573px] h-[220px] bg-[#FFBF0F] rounded-xl text-left">
+            <div class="flex items-center justify-center gap-5">
+              <div class="">
+                <h1 class="text-[40px] font-extrabold font-inter">15% OFF</h1>
+                <p class="text-xl font-medium">on your next purchase</p>
+                <p class="text-[#0307128080]">use by January 2024</p>
+              </div>
+              <span><img src="images/cupon-devider.png" alt="" /></span>
+              <div>
+                <h1 class="text-3xl font-extrabold font-raleway">NEW15</h1>
+                <p class="text-[#0307128080]">Coupon Code</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 02 -->
+          <div class="w-[573px] h-[220px] bg-[#F78C9C] rounded-xl text-left">
+            <div class="flex items-center justify-center gap-5">
+              <div class="">
+                <h1 class="text-[40px] font-extrabold font-inter">20% OFF</h1>
+                <p class="text-xl font-medium">on your next purchase</p>
+                <p class="text-[#0307128080]">use by January 2024</p>
+              </div>
+              <span><img src="images/cupon-devider.png" alt="" /></span>
+              <div>
+                <h1 class="text-3xl font-extrabold font-raleway">Couple 20</h1>
+                <p class="text-[#0307128080]">Coupon Code</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Offer Button -->
+        <button
+          class="btn text-xl font-medium bg-none border-green-300 text-[#1DD100] rounded-xl mt-16"
+        >
+          See All Offers
+        </button>
+      </section>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>
