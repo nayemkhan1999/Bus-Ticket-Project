@@ -313,20 +313,14 @@
                 <p>Price</p>
               </div>
               <div class="divider"></div>
+              <!-- js Need this id
+              ===================== -->
+
               <div
-                class="flex items-center justify-between font-normal opacity-70 mb-4"
-              >
-                <p>C2</p>
-                <p>Economoy</p>
-                <p>550</p>
-              </div>
-              <div
-                class="flex items-center justify-between font-normal opacity-70"
-              >
-                <p>C2</p>
-                <p>Economoy</p>
-                <p>550</p>
-              </div>
+                id="append-child"
+                class="flex flex-col justify-between"
+              ></div>
+
               <div class="divider"></div>
               <div
                 class="flex items-center justify-between font-semibold text-black mb-4"
@@ -334,16 +328,21 @@
                 <p>Total Price</p>
                 <!-- js Need this id
                 ======================== -->
-                <p id="total-price">BDT 00</p>
+                <p>BDT <span id="total-price">00</span></p>
               </div>
               <!-- input and Button -->
               <div class="relative">
+                <!-- js Need this link 
+                =======================-->
                 <input
+                  id="input-text"
                   class="w-full h-12 rounded-lg pl-5"
                   type="text"
                   placeholder="Have any copupon?"
                 />
+                <!-- js Need this link -->
                 <button
+                  id="apply-btn"
                   class="bg-[#1DD100] w-16 h-9 text-center text-white font-medium rounded-lg absolute right-2 top-1"
                 >
                   Apply
@@ -355,7 +354,7 @@
                 <p>Grand Total</p>
                 <!-- js Need this id
                 ==================== -->
-                <p id="grand-total">BDT 00</p>
+                <p>BDT <span id="grand-total">00</span></p>
               </div>
             </div>
 
