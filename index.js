@@ -50,12 +50,7 @@ for(const btn of allButton){
         const totalSum = totalPrice + 550;
         document.getElementById('total-price').innerText = totalSum;  
         ticketPrice = ticketPrice + 550;
-       
-        
-        
-
-
-        
+                     
     })
         
 }
@@ -69,20 +64,36 @@ function apply(){
         const discount = document.getElementById('total-price').innerText;
         const ConvertTotalPrice = parseInt(discount);
             const discount2 = ConvertTotalPrice * 0.15;
+            // Discount Price
            const nameTag = document.getElementById('Discount-price')
             const pTag = document.createElement('p')
-            pTag.innerText =`discount price : ${discount2} TK`;
+            pTag.innerText =`Discount price : ${discount2} TK`;
             nameTag.appendChild(pTag)
            
             const totalDiscount = ConvertTotalPrice - discount2;
             const discount3 = document.getElementById('grand-total').innerText = totalDiscount;
 
+            // Hidden full Div
+            const applyButton = document.getElementById('remove-div');
+            applyButton.classList.add('hidden')
+
     }else if(couponCodes == 'COUPLE20'){
         const discount = document.getElementById('total-price').innerText;
         const ConvertTotalPrice = parseInt(discount);
             const discount2 = ConvertTotalPrice * 0.20
+            // Discount Price
+            const nameTag = document.getElementById('Discount-price')
+            const pTag = document.createElement('p')
+            pTag.innerText =`Discount price : ${discount2} TK`;
+            nameTag.appendChild(pTag)
+
             const totalDiscount = ConvertTotalPrice - discount2;
             const discount3 = document.getElementById('grand-total').innerText = totalDiscount;
+
+              // Hidden full Div
+              const applyButton = document.getElementById('remove-div');
+              applyButton.classList.add('hidden')
+
     }else{
         alert('invalid code')
     }
@@ -91,3 +102,9 @@ function apply(){
 }
 
 apply()
+
+// const nextButton = document.getElementById('next-btn');
+// nextButton.addEventListener('click',function(){
+//     const hideBody = document.getElementById('body');
+//     hideBody.classList.add('hidden')
+// })
