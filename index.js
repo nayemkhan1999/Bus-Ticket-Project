@@ -1,11 +1,22 @@
 const allButton = document.querySelectorAll('.seat')
+let seat = 4;
 let count = 1;
 let ticketPrice = 0;
 for(const btn of allButton){
     btn.addEventListener('click',function(){
         const hello = btn.innerText;
+
+        // Validation Only can click 4 seat
+        seat = seat - 1;
+        if(seat < 0){
+            alert('only 4 seat can be selected')
+            return
+        }
+        
         btn.style.background = '#1DD100'
         btn.style.color = 'white'
+        
+      
         
         // Seat count and increase one by one seat
         const seatCount = parseFloat(document.getElementById('seat-count').innerText);
@@ -37,32 +48,46 @@ for(const btn of allButton){
         //Total Price Calculate
         const totalPrice =parseFloat(document.getElementById('total-price').innerText);
         const totalSum = totalPrice + 550;
-        document.getElementById('total-price').innerText = totalSum;   
+        document.getElementById('total-price').innerText = totalSum;  
         ticketPrice = ticketPrice + 550;
+       
         
         
+
 
         
     })
         
 }
 
-// Discount price and use to coupon code
-const applyButton = document.getElementById('apply-btn')
-applyButton.addEventListener('click',function(){
-    const inputText = document.getElementById('input-text');
-    const inputValue = inputText.value.split(' ').join('').toUpperCase();
-    const totalGrand = parseFloat(document.getElementById('grand-total'));
-    // Condition 
-    if(inputValue === 'NEW15'){
-        const discountPrice = ticketPrice * 0.15;
-        const result = ticketPrice - discountPrice;
-        document.getElementById('grand-total').innerText = result
-            
+function apply(){
+ const apply = document.getElementById('apply-btn')
+ apply.addEventListener('click',function(){
+    const inputText = document.getElementById('input-text').value;
+    const couponCodes = inputText.toUpperCase().split(" ").join("");
+    if(couponCodes == 'NEW15'){
+        const discount = document.getElementById('total-price').innerText;
+        const ConvertTotalPrice = parseInt(discount);
+            const discount2 = ConvertTotalPrice * 0.15;
+           const nameTag = document.getElementById('Discount-price')
+            const pTag = document.createElement('p')
+            pTag.innerText =`discount price : ${discount2} TK`;
+            nameTag.appendChild(pTag)
+           
+            const totalDiscount = ConvertTotalPrice - discount2;
+            const discount3 = document.getElementById('grand-total').innerText = totalDiscount;
 
+    }else if(couponCodes == 'COUPLE20'){
+        const discount = document.getElementById('total-price').innerText;
+        const ConvertTotalPrice = parseInt(discount);
+            const discount2 = ConvertTotalPrice * 0.20
+            const totalDiscount = ConvertTotalPrice - discount2;
+            const discount3 = document.getElementById('grand-total').innerText = totalDiscount;
     }else{
-            alert('invalid Coupon')
-        }
+        alert('invalid code')
+    }
+ })
 
-   
-})
+}
+
+apply()
