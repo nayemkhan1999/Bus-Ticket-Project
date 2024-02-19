@@ -35,7 +35,7 @@
       <!-- Template Section  -->
       <section class="mt-12">
         <div
-          class="bg-no-repeat bg-contain min-h-screen text-center pt-20"
+          class="bg-no-repeat bg-contain min-h-screen text-center pt-20 relative"
           style="background-image: url(images/banner.png)"
         >
           <h1 class="text-6xl font-extrabold text-white">
@@ -47,10 +47,40 @@
             <br />While the thing with the preposition usage was resolved for me
           </p>
           <button
-            class="btn rounded-xl items-center text-xl font-bold bg-[#1DD100] text-black border-none mt-5"
+            class="btn rounded-xl items-center text-xl font-bold bg-[#1DD100] text-black border-none mt-8"
           >
-            Buy Tickets
+            <a href="#link">Buy Tickets</a>
           </button>
+        </div>
+        <!-- Div Number 01 -->
+        <div
+          class="flex items-center gap-4 absolute bottom-[-60px] left-[230px] px-5 rounded-2xl border-b-4 border-b-green-500 w-[280px] h-[130px] bg-[#fff]"
+        >
+          <img class="w-16 h-16" src="images/people.png" alt="" />
+          <div>
+            <h1 class="text-4xl font-bold font-inter mb-2">500K+</h1>
+            <p class="opacity-70">Registered users</p>
+          </div>
+        </div>
+        <!-- Div number 02 -->
+        <div
+          class="flex items-center gap-2 absolute bottom-[-60px] left-[530px] px-5 rounded-2xl border-b-4 border-b-green-500 w-[280px] h-[130px] bg-[#fff]"
+        >
+          <img class="w-16 h-16" src="images/ticket-cupon.png" alt="" />
+          <div>
+            <h1 class="text-4xl font-bold font-inter mb-2">1.7lacks+</h1>
+            <p class="opacity-70">Tickets sold</p>
+          </div>
+        </div>
+        <!-- Div number 03 -->
+        <div
+          class="flex items-center gap-4 absolute bottom-[-60px] left-[830px] px-5 rounded-2xl border-b-4 border-b-green-500 w-[280px] h-[130px] bg-[#fff]"
+        >
+          <img class="w-16 h-16" src="images/stoppage.png" alt="" />
+          <div>
+            <h1 class="text-4xl font-bold font-inter mb-2">80K+</h1>
+            <p class="opacity-70">Rental partners</p>
+          </div>
         </div>
       </section>
 
@@ -120,11 +150,15 @@
           <div class="flex">
             <!-- Nav-Bar Section -->
             <div>
-              <div class="flex items-center justify-between h-10 p-10 gap-40">
-                <h1 class="flex items-center gap-2 text-3xl font-bold">
-                  <span><img src="images/bus-logo.png" alt="" /></span>
-                  Greenline Paribahan
-                </h1>
+              <div class="flex items-center justify-between p-10 gap-40">
+                <div class="flex items-center gap-3">
+                  <img src="images/bus-logo.png" alt="" />
+                  <div>
+                    <h1 class="text-3xl font-bold">Greenline Paribahan</h1>
+                    <p class="opacity-70 ml-2">Coach-009-WEB ! AC_Business</p>
+                  </div>
+                </div>
+
                 <!-- <p>Coach-009-WEB ! AC_Business</p> -->
                 <button
                   class="btn btn-outline btn-success rounded-xl flex gap-2 items-center text-xl font-bold text-[#1DD100] bg-[#1DD1001A]"
@@ -134,35 +168,33 @@
                 </button>
               </div>
               <!-- Dhaka to Sylhet Rutine time -->
-              <div class="bg-[#c5c5c5] w-[744px] h-80 mx-5 rounded-xl">
+              <div class="bg-[#c5c5c5] w-[744px] mx-5 rounded-xl">
                 <!-- Div number 01 -->
-                <div class="flex items-center justify-between mx-6 p-5">
+                <div class="flex items-center justify-between mx-10 pt-5">
                   <h1>Routine</h1>
                   <p class="font-medium">Dhaka - Sylhet</p>
                 </div>
                 <div class="divider"></div>
 
                 <!-- Div number 02 -->
-                <div class="flex items-center justify-between mx-6 p-5">
+                <div class="flex items-center justify-between mx-10">
                   <h1>Departure Time</h1>
                   <p class="font-medium">9:00 PM</p>
                 </div>
                 <div class="divider"></div>
 
                 <!-- Div number 03 -->
-                <div class="flex items-center justify-between mx-6 p-5">
+                <div class="flex items-center justify-between mx-10 pb-8">
                   <!-- Button number 01 -->
-                  <button class="btn btn-active rounded-2xl">
+                  <button class="btn btn-active rounded-2xl bg-[#fff]">
                     Boarding Point - Laxmipur
                   </button>
-
                   <!-- Button number 02 -->
-                  <button class="btn btn-active rounded-2xl">
+                  <button class="btn btn-active rounded-2xl bg-[#fff]">
                     Dropping Point - Bogura
                   </button>
-
                   <!-- Button number 03 -->
-                  <button class="btn btn-active rounded-2xl">
+                  <button class="btn btn-active rounded-2xl bg-[#fff]">
                     Est. Time - 11 Hour
                   </button>
                 </div>
@@ -291,7 +323,7 @@
           </div>
 
           <!-- Calculate All Function -->
-          <div class="w-[40%] border-green-200">
+          <div id="link" class="w-[40%] border-green-200">
             <h1 class="text-2xl font-semibold p-4">Select Your Seat</h1>
             <div class="divider"></div>
             <!-- Seat Economoy Calculate -->
@@ -391,25 +423,42 @@
 
               <!-- Open the modal using ID.showModal() method -->
               <button
-                class="btn w-full h-12 bg-[#1DD100] text-white font-bold text-xl rounded-lg mt-6"
-                onclick="my_modal_2.showModal()"
+                class="btn btn w-full h-12 bg-[#1DD100] text-white font-bold text-xl rounded-lg mt-6"
+                onclick="my_modal_5.showModal()"
               >
                 Next
               </button>
-              <dialog id="my_modal_2" class="modal">
-                <div class="modal-box">
-                  <img src="images/success.png" alt="" />
-                  <h3 class="font-bold text-lg">SUCCESS</h3>
-                  <p class="py-4">
+              <dialog
+                id="my_modal_5"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box text-center mx-auto p-5">
+                  <img
+                    class="mx-auto mb-4 py-4"
+                    src="images/success.png"
+                    alt=""
+                  />
+                  <h3 class="font-extrabold text-2xl text-[#27AE60]">
+                    SUCCESS
+                  </h3>
+                  <p class="py-4 text-xl font-medium text-black p-4">
                     Thank you for Booking Our Bus Seats. <br />
-                    We are working hard to find the best service and deals for
-                    you.
+                    We are working hard to find the best service for you.
                   </p>
-                  <p>Shortly you will find a confirmation in your email.</p>
+                  <p class="opacity-70">
+                    Shortly you will find a confirmation in your email.
+                  </p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button
+                        class="btn bg-[#27AE60] text-white rounded-full my-3 p-2 text-xl font-semibold w-[300px] h-[55px] mr-20 text-center"
+                      >
+                        Continue
+                      </button>
+                    </form>
+                  </div>
                 </div>
-                <form method="dialog" class="modal-backdrop">
-                  <button>close</button>
-                </form>
               </dialog>
 
               <div class="flex items-center justify-between mt-4 mx-6">
@@ -459,7 +508,8 @@
       </footer>
     </footer>
 
-    <!-- javaScrip connected link -->
+    <!-- javaScrip connected link 
+    ================================-->
     <script src="/index.js"></script>
   </body>
 </html>

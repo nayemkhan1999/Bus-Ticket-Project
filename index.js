@@ -3,7 +3,8 @@ let seat = 4;
 let count = 1;
 let ticketPrice = 0;
 for(const btn of allButton){
-    btn.addEventListener('click',function(){
+    btn.addEventListener('click',function(event){
+        event.target.setAttribute('disabled', true);
         const hello = btn.innerText;
 
         // Validation Only can click 4 seat
@@ -49,6 +50,7 @@ for(const btn of allButton){
         const totalPrice =parseFloat(document.getElementById('total-price').innerText);
         const totalSum = totalPrice + 550;
         document.getElementById('total-price').innerText = totalSum;  
+        document.getElementById('grand-total').innerText = totalSum;
         ticketPrice = ticketPrice + 550;
                      
     })
@@ -103,8 +105,3 @@ function apply(){
 
 apply()
 
-// const nextButton = document.getElementById('next-btn');
-// nextButton.addEventListener('click',function(){
-//     const hideBody = document.getElementById('body');
-//     hideBody.classList.add('hidden')
-// })
