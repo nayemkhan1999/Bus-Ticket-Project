@@ -99,9 +99,27 @@ function apply(){
     }else{
         alert('invalid code')
     }
+
+
  })
+ const nextBtn = document.getElementById('next');
+ nextBtn.addEventListener('keyup',function(event){
+    const playStore = document.getElementById('seat-count').innerText;
+    const nextValue = event.target.value;
+    
+    const convertPlayStore = parseInt(playStore)
+    
+    if(convertPlayStore >= 1 && nextValue.length > 0){
+        const activeBtn = document.getElementById('next-btn')
+        activeBtn.removeAttribute ('disabled',true)
+        
+    }
+
+
+})
 
 }
+
 
 apply()
 
